@@ -3,6 +3,14 @@ import { studentModel } from '../models/studentModel.js';
 
 const app = express();
 
+app.get('/', (req, res) => {
+  res.status(200).send(
+    `<center>
+       <h1>Grades API</h1>
+     </center>`
+  );
+});
+
 app.post('/student', async (req, res) => {
   try {
     const student = new studentModel(req.body);
