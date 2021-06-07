@@ -11,7 +11,7 @@ const studentSchema = mongoose.Schema({
   },
   type: {
     type: String,
-    rtequire: true,
+    require: true,
   },
   value: {
     type: Number,
